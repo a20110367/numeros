@@ -39,9 +39,10 @@
       <button onclick="lessThick()" id="btnMinus">-</button>
 
     </div>
-    <div class="container">
-      <p id=" Resultado_Secuencial"></p>
-      <p id=" Resultado_Convulucional"></p>
+    <div style="text-align: center;">
+      <p id="Resultado_Secuencial"></p>
+      <br/>
+      <p id="Resultado_Convulucional"></p>
     </div>
   
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
@@ -142,7 +143,7 @@
         var mayorIndice = resultados.indexOf(Math.max.apply(null, resultados));
         
         console.log("Prediccion", mayorIndice);
-        desc = "Resultado Secuencial ";
+        desc = " Resultado Secuencial ";
         document.getElementById("Resultado_Secuencial").innerHTML = desc + mayorIndice;
     }
 
@@ -171,7 +172,7 @@
       var mayorIndice = resultados.indexOf(Math.max.apply(null, resultados));
       
       console.log("Prediccion", mayorIndice);
-      desc = "Resultado Convu ";
+      desc = " Resultado Convu ";
       document.getElementById("Resultado_Convulucional").innerHTML = desc + mayorIndice;
   }
 
